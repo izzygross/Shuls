@@ -1,2 +1,0 @@
-# Shuls
-RBS Shuls
