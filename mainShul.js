@@ -11,5 +11,6 @@ async function loadData () {
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.shacharit + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.mincha + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.maariv + "</td>"
+        document.getElementById("newLine"+i).innerHTML += "<td><img src='Delete.jpg' style='hight:50px;width:50'> </td>"
     }
 }
