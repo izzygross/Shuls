@@ -11,6 +11,23 @@ async function loadData () {
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.shacharit + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.mincha + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.maariv + "</td>"
-        document.getElementById("newLine"+i).innerHTML += "<td><img src='Delete.jpg' style='hight:50px;width:50'> </td>"
+        document.getElementById("newLine"+i).innerHTML += "<td><img src='Edit.jpg' style='height:30px; width:30px' onclick ='editShul (" + i + ")' ></td>"
+        document.getElementById("newLine"+i).innerHTML += "<td><img src='Delete.jpg' style='height:50px; width:100px' onclick ='deleteShul (" + i + ")' ></td>"
     }
+}
+
+async function deleteShul (j) {
+    const res = await getJsonFromServer();
+    const shulArray = res.record;
+
+    shulArray.splice (j,1);
+    await updateJsonToServer(shulArray);
+
+    location.reload ();
+
+}
+
+async function editShul (s){
+
+    alert("please edit shul #" + s);
 }
