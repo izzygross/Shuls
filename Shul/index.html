@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RBS Shuls</title>
+        <link rel="stylesheet" type="text/css" href="izzyShul.css">
+        <script src="dataBin.js"></script>
+        <script src="mainShul.js"></script>
+    </head>
+    <body>
+        <h1 style="text-align: center; font-size: 72px;">RBS Shuls</h1>
+        
+        <a href="addShul.html">
+            <button>
+                Add Another Shul
+            </button>
+        </a>
+        <br>
+        <table id="shulTable">
+            <tr>
+                <th>Shul Name</th>
+                <th>Shul Address</th>
+                <th>Nusach</th>
+                <th>Shacharit</th>
+                <th>Mincha</th>
+                <th>Maariv</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+        </table>
+
+    </body>
+    <script>
+        loadData ();
+    </script>
+
+</html>
