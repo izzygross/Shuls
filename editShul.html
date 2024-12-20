@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Edit Shul</title>
+        <script src="dataBin.js"></script>
+        <script src="editShul.js"></script>
+    </head>
+    <body>
+        <table style="text-align: left;">
+            <tr>
+                <th>Shul Name</th>
+                <td><input id="shulName"></td>
+            </tr>
+            <tr>
+                <th>Shul Address</th>
+                <td><input id="shulAddress"></td>
+            </tr>
+            <tr>
+                <th>Nusach</th>
+                <td>  
+                        <input type="radio" id="sfarad" value="sfarad" name="nusach">sfarad</input>
+                        <input type="radio" id="ashkenaz" value="ashkenaz" name="nusach">ashkenaz</input>
+                        <input type="radio" id="edot" value="edot" name="nusach">edot</input>                 
+                </td>
+            </tr>
+            <tr>
+                <th>Shacharit</th>
+                <td>
+                    <input type="number" min="0" max="24" id="shacharitH" style="text-align: right;">
+                    :
+                    <input type="number" min="0" max="59" id="shacharitM">
+                </td>
+            </tr>
+            <tr>
+                <th>Mincha</th>
+                <td>
+                    <input type="number" min="0" max="24" id="minchaH" style="text-align: right;">
+                    :
+                    <input type="number" min="0" max="59" id="minchaM">
+                </td>
+            </tr>
+            <tr>
+                <th>Maariv</th>
+                <td>
+                    
+                    <input type="number" min="0" max="24" id="maarivH" style="text-align: right;">
+                    :
+                    <input type="number" min="0" max="59" id="maarivM">
+                </td>
+            </tr>
+        </table>
+        <button onclick="updateShulData ()">Update Shul</button>
+        <p id="json"></p>
+
+    </body>
+    <script>
+        getShulData ();
+    </script>
+</html>

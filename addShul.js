@@ -19,7 +19,7 @@ async function saveShulData () {
      shulArray.push(shul);
 
     updateJsonToServer(shulArray);
-    //windows.location.href ("index.html")
+    window.open ("index.html","_self")
 }
 
 

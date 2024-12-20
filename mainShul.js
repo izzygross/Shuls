@@ -11,8 +11,8 @@ async function loadData () {
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.shacharit + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.mincha + "</td>"
         document.getElementById("newLine"+i).innerHTML += "<td>" + shulData.maariv + "</td>"
-        document.getElementById("newLine"+i).innerHTML += "<td><img src='Edit.jpg' style='height:30px; width:30px' onclick ='editShul (" + i + ")' ></td>"
-        document.getElementById("newLine"+i).innerHTML += "<td><img src='Delete.jpg' style='height:50px; width:100px' onclick ='deleteShul (" + i + ")' ></td>"
+        document.getElementById("newLine"+i).innerHTML += "<td><img src='Edit.jpg' style='height:150px; width:150px' onclick ='editShul (" + i + ")' ></td>"
+        document.getElementById("newLine"+i).innerHTML += "<td><img src='Delete.jpg' style='height:150px; width:200px' onclick ='deleteShul (" + i + ")' ></td>"
     }
 }
 
@@ -27,7 +27,7 @@ async function deleteShul (j) {
 
 }
 
-async function editShul (s){
+ function editShul (s){
 
-    alert("please edit shul #" + s);
+    window.open ("editShul.html?shul="+s,"_self")
 }
